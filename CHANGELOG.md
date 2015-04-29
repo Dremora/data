@@ -2,6 +2,11 @@
 
 ### Master
 
+* `RESTSerializer#typeForRoot` has been deprecated. You can use
+  `RESTSerializeer#modelNameFromPayloadKey` instead.
+* Added `RESTSerializer#payloadKeyFromModelName`. This allows you to
+  specify the outgoing root key for a JSON payload.
+
 ### Release 1.0.0-beta.16.1 (March 24, 2015)
 
  * Use ember-inflector 1.5
