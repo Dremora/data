@@ -4,6 +4,7 @@ var get = Ember.get;
 var isNone = Ember.isNone;
 var map = Ember.ArrayPolyfills.map;
 var merge = Ember.merge;
+var camelize = Ember.String.camelize;
 
 /**
   In Ember Data a Serializer is used to serialize and deserialize
@@ -1068,7 +1069,7 @@ export default Serializer.extend({
   */
 
   keyForRelationship: function(key, typeClass) {
-    return key;
+    return camelize(key);
   },
 
   // HELPERS
